@@ -32,5 +32,5 @@ nav li > a {
   margin-left: 50px;
 }
 .nav-image {
-  /* margin-left: 8rem; */
+  box-shadow: 2px 2px #000;
 }
