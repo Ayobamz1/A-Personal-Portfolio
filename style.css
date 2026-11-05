@@ -173,7 +173,7 @@ nav .btn button:hover {
 /* MOBILE RESPONSIVE */
 @media screen and (max-width: 600px) {
   .navbar, .hero-section {
-        width: 100%;
+        width: 95%;
     max-width: 100%;
   }
   
