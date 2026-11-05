@@ -13,12 +13,20 @@ body {
     "Manrope",
     Arial sans-serif;
   background-color: #1A1A1A;
+  
   height: 100vh;
   margin: 60px auto;
   max-width: 1500px;
   width: 90%;
   color: #fff;
+  /* A deep midnight background blending into a soft corner glow */
+  background-color: #0b0a0f; 
+  background-image: 
+    radial-gradient(at 80% 20%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 20% 80%, rgba(139, 92, 246, 0.05) 0px, transparent 40%);
 }
+
+
 
 .navbar {
   display: flex;
@@ -57,22 +65,25 @@ nav li > a:hover {
   box-shadow: 2px 2px 10px #000;
 }
 
+/* --- Updated Navigation Button CSS --- */
 nav .btn button {
-  background: linear-gradient( 90deg, rgb(149, 5, 168), rgb(36, 90, 238));
-  border: none;
+  background: linear-gradient(90deg, rgb(149, 5, 168), rgb(36, 90, 238));
+  border: 2px solid transparent; /* Prevents button from shifting size on hover */
   color: #fff;
   padding: 10px 20px;
   border-radius: 2rem;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  transition-duration: .3s;
+  transition: all 0.3s ease; /* Transitions all properties smoothly over 0.3s */
 }
 
 nav .btn button:hover {
-  outline: 2px solid #fff;
-  background: transparent;
+  border-color: #fff;
+  /* Instead of transparent background, use inset shadow to transition the fill color over the gradient */
+  box-shadow: inset 0 0 0 50px #1a1a1a; 
 }
+
 
 .hero-section {
   padding: 150px 0;
@@ -122,16 +133,22 @@ nav .btn button:hover {
 }
 
 
+/* --- Updated Hero Buttons CSS --- */
 .hero-section .btn .view {
-  background: linear-gradient( 90deg, rgb(149, 5, 168), rgb(36, 90, 238));
+  background: linear-gradient(90deg, rgb(149, 5, 168), rgb(36, 90, 238));
   padding: 20px 30px;
   border-radius: 0.5rem;
   cursor: pointer;
   color: #fff;
   font-weight: 600;
-  border: none;
+  border: 2px solid transparent; /* Smooth container layout alignment */
   font-size: 1rem;
-  transition-duration: 5s;
+  transition: all 0.3s ease; /* Changed from 5s to snappy 0.3s */
+}
+
+.hero-section .btn .view:hover {
+  border-color: #fff;
+  box-shadow: inset 0 0 0 50px #0b0a0f; /* Fills transparently over gradient to dark theme background */
 }
 
 .hero-section .btn .CV {
@@ -139,19 +156,21 @@ nav .btn button:hover {
   padding: 20px 30px;
   border-radius: 0.5rem;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid #fff; /* Fixed: Kept border intact */
   color: #fff;
   font-weight: 600;
-  border: none;
   font-size: 1rem;
-  transition: 5s;
+  transition: all 0.3s ease; /* Changed from 5s to snappy 0.3s */
 }
 
-.hero-section .btn .view:hover {
-  background: transparent;
-  outline: 2px solid #fff;
+.hero-section .btn .CV:hover {
+  background: #fff;
+  color: #0b0a0f; /* Inverts color cleanly on hover */
 }
+
 .hero-section .image {
+    position: relative;
+  display: inline-block;
   width: 30rem;
   height: 30rem;
   background: #525252;
@@ -159,7 +178,33 @@ nav .btn button:hover {
   border: 10px solid #e9e5e5;
   box-shadow: 10px 10px 50px solid #000;
   animation: bounce 1s alternate infinite;
+
+  border: 2px solid rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
 }
+
+
+
+.hero-section .image::before {
+    content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;       /* Match or slightly exceed your circle size */
+  height: 100%;
+  border-radius: 50%;
+  
+  /* Using your signature purple with a soft opacity transition */
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0) 70%);
+  
+  /* This creates the ultimate blurry glow effect */
+  filter: blur(40px); 
+  z-index: -1;        /* Keeps the light behind your photo */
+  pointer-events: none;
+  
+}
+
 
 @keyframes bounce {
   0% {
