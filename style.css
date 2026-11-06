@@ -1,98 +1,38 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family:
-    "Manrope",
-    Arial sans-serif;
-  background-color: #1A1A1A;
-  
-  /* height: 100vh; */
-  margin: 60px auto;
-  max-width: 1500px;
-  width: 90%;
+  font-family: "Manrope", Arial, sans-serif;
+  min-height: 100vh;
   color: #fff;
-  /* A deep midnight background blending into a soft corner glow */
-  background-color: #202020; 
-  background-image: 
-    radial-gradient(at 80% 20%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
-    radial-gradient(at 20% 80%, rgba(139, 92, 246, 0.05) 0px, transparent 40%);
+  background-color: #202020;
 }
 
-
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-
+.navbar .nav-link:hover {
+  color: rgb(90, 90, 216);
 }
 
-nav li {
-  list-style: none;
-  display: inline;
-}
-
-nav li > a {
-  margin-left: 50px;
-  text-decoration: none;
-  color: #fff;
-  padding-bottom: 10px;
-  transition-duration: .3s;
-}
-
-nav li > a:hover {
- color:  rgb(90, 90, 216);
-}
-
-.nav-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-image img {
-  width: 2rem;
-  box-shadow: 2px 2px 10px #000;
-}
-
-/* --- Updated Navigation Button CSS --- */
-nav .btn button {
+.btn-hire {
   background: linear-gradient(90deg, rgb(149, 5, 168), rgb(36, 90, 238));
-  border: 2px solid transparent; /* Prevents button from shifting size on hover */
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 2rem;
-  cursor: pointer;
-  font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease; /* Transitions all properties smoothly over 0.3s */
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
 }
-
-nav .btn button:hover {
+.btn-hire:hover {
+  color: #fff;
   border-color: #fff;
-  /* Instead of transparent background, use inset shadow to transition the fill color over the gradient */
-  box-shadow: inset 0 0 0 50px #1a1a1a; 
+  box-shadow: inset 0 0 0 50px #1a1a1a;
 }
 
-
+/* ---------- HERO ---------- */
+/* Phone first: these are the defaults */
 .hero-section {
-  padding: 150px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  padding: 60px 0;
 }
 
-.hero-section .text .par {
+.hero-section .par {
   text-shadow: 1px 2px 8px #fff;
   padding: 6px;
   border-radius: 20rem;
@@ -101,13 +41,13 @@ nav .btn button:hover {
   font-weight: 600;
   background: rgba(109, 76, 119, 0.308);
   backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(3px);
   margin-bottom: 2rem;
-
 }
 
 .hero-section .head h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .hero-section .head h1 span {
@@ -115,111 +55,97 @@ nav .btn button:hover {
 }
 
 .hero-section .head p {
-  font-size: 3rem;
+  font-size: 1.5rem;
   word-spacing: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-section .data p {
-  font-size: 1.3rem;
-  font-weight: 450px;
-  color: #525252;
-  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #a1a1b0;
+  margin-bottom: 2rem;
 }
 
-.hero-section .btn {
-  display: flex;
-  gap: 1rem;
-}
-
-
-/* --- Updated Hero Buttons CSS --- */
-.hero-section .btn .view {
+/* Buttons */
+.hero-buttons .view {
   background: linear-gradient(90deg, rgb(149, 5, 168), rgb(36, 90, 238));
-  padding: 20px 30px;
+  padding: 16px 28px;
   border-radius: 0.5rem;
   cursor: pointer;
   color: #fff;
   font-weight: 600;
-  border: 2px solid transparent; /* Smooth container layout alignment */
+  border: 2px solid transparent;
   font-size: 1rem;
-  transition: all 0.3s ease; /* Changed from 5s to snappy 0.3s */
+  transition: all 0.3s ease;
 }
 
-.hero-section .btn .view:hover {
+.hero-buttons .view:hover {
   border-color: #fff;
-  box-shadow: inset 0 0 0 50px #0b0a0f; /* Fills transparently over gradient to dark theme background */
+  box-shadow: inset 0 0 0 50px #0b0a0f;
 }
 
-.hero-section .btn .CV {
+.hero-buttons .CV {
   background: transparent;
-  padding: 20px 30px;
+  padding: 16px 28px;
   border-radius: 0.5rem;
   cursor: pointer;
-  border: 2px solid #fff; /* Fixed: Kept border intact */
+  border: 2px solid #fff;
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease; /* Changed from 5s to snappy 0.3s */
+  transition: all 0.3s ease;
 }
 
-.hero-section .btn .CV:hover {
+.hero-buttons .CV:hover {
   background: #fff;
-  color: #0b0a0f; /* Inverts color cleanly on hover */
+  color: #0b0a0f;
 }
 
+/* Image circle */
 .hero-section .image {
-    position: relative;
-  display: inline-block;
-  width: 30rem;
-  height: 30rem;
+  position: relative;
+  width: min(30rem, 80vw); /* never wider than 80% of the screen */
+  aspect-ratio: 1;         /* height always equals width */
   background: #525252;
-  border-radius: 30rem;
-  border: 10px solid #e9e5e5;
-  box-shadow: 10px 10px 50px solid #000;
-  animation: bounce 1s alternate infinite;
-
+  border-radius: 50%;
   border: 2px solid rgba(168, 85, 247, 0.5);
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+  animation: bounce 1s ease-in-out alternate infinite;
 }
 
-
-
 .hero-section .image::before {
-    content: "";
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;       /* Match or slightly exceed your circle size */
+  width: 100%;
   height: 100%;
   border-radius: 50%;
-  
-  /* Using your signature purple with a soft opacity transition */
   background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0) 70%);
-  
-  /* This creates the ultimate blurry glow effect */
-  filter: blur(40px); 
-  z-index: -1;        /* Keeps the light behind your photo */
+  filter: blur(40px);
+  z-index: -1;
   pointer-events: none;
-  
 }
-
 
 @keyframes bounce {
-  0% {
-    transform: translateY(-20px);
-  }  
-  100% {
-    transform: translateY(15px);
-  }
+  0%   { transform: translateY(-20px); }
+  100% { transform: translateY(15px); }
 }
 
-/* MOBILE RESPONSIVE */
-@media screen and (max-width: 600px) {
-  .navbar, .hero-section {
-        width: 95%;
-    max-width: 100%;
-  }
-  
+/* ---------- MEDIA QUERIES (small to large) ---------- */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .hero-section { padding: 100px 0; }
+  .hero-section .head h1 { font-size: 3.5rem; }
+  .hero-section .head p { font-size: 2rem; }
+}
+
+/* Laptop and up */
+@media (min-width: 992px) {
+  .hero-section { padding: 120px 0; }
+  .hero-section .head h1 { font-size: 5rem; }
+  .hero-section .head p { font-size: 3rem; }
 }
