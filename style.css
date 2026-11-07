@@ -19,6 +19,12 @@ nav .nav-link:hover {
   border-bottom: 1px solid #fff;
 }
 
+.navbar-toggler-icon {
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+  font-size: 1.2rem;
+}
+
+
 .btn-hire {
   background: #08E4B0;
   padding: 10px 20px;
@@ -41,6 +47,7 @@ header#home {
   background-repeat: no-repeat;
   min-height: 40px;
   font-family: "Poppins", sans-serif;
+  border: 1px solid #292929;
 }
 
 /* ---------- HERO ---------- */
@@ -48,6 +55,7 @@ header#home {
 .hero-section {
   padding: 60px 0;
   overflow-x: clip;
+  background: linear-gradient(90deg, #222222, #2F2823);
 }
 
 nav span {
@@ -62,15 +70,10 @@ nav li > a {
 }
 
 .hero-section .par {
-  text-shadow: 1px 2px 8px #fff;
-  padding: 6px;
   border-radius: 20rem;
   text-align: center;
   width: 14rem;
   font-weight: 600;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  margin-bottom: 2rem;
 }
 
 .hero-section .head h1 {
