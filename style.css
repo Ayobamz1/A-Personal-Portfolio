@@ -15,17 +15,14 @@ body {
 }
 
 
-.navbar .nav-link:hover {
-  color: rgb(90, 90, 216);
-}
-
-nav {
+nav .nav-link:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .btn-hire {
-  background: #2a7b9b;
-  background: linear-gradient(70deg, rgb(132, 5, 182) 20%, rgb(81, 2, 172) 80%);
-  color: #fff;
+  background: #08E4B0;
+  padding: 10px 20px;
+  color: #000;
   font-weight: 600;
   border: 2px solid transparent;
   transition: all 0.3s ease;
@@ -58,6 +55,11 @@ nav span {
   font-weight: 700;
 }
 
+nav li > a {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
 
 .hero-section .par {
   text-shadow: 1px 2px 8px #fff;
