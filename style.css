@@ -145,11 +145,6 @@ nav li > a {
 /* Buttons */
 
 
-.hero-section .hero-buttons {
-
-}
-
-
 /* Image circle */
 .hero-section .image {
   position: relative;
@@ -157,7 +152,7 @@ nav li > a {
   aspect-ratio: 1; /* height always equals width */
   background: #525252;
   border-radius: 50%;
-  border: 2px solid rgba(168, 85, 247, 0.5);
+  border: 2px solid rgba(59, 135, 235, 0.5);
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
   animation: bounce 1s ease-in-out alternate infinite;
 }
@@ -173,14 +168,26 @@ nav li > a {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(168, 85, 247, 0.4) 0%,
-    rgba(168, 85, 247, 0) 70%
+    rgba(44, 211, 233, 0.4) 0%,
+    rgba(2, 129, 233, 0.11) 70%
   );
   filter: blur(40px);
   z-index: -1;
   pointer-events: none;
 }
 
+.hero-section .github a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+
+.hero-section .github a:hover {
+  color: #04ce9f;
+  border-bottom: 1px solid #04ce9f;
+}
 @keyframes bounce {
   0% {
     transform: translateY(-20px);
