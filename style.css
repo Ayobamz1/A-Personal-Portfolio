@@ -54,6 +54,7 @@ header#home {
 /* Phone first: these are the defaults */
 .hero-section {
   padding: 60px 0;
+    font-family: "Poppins", sans-serif;
   overflow-x: clip;
   background: linear-gradient(90deg, #222222, #2F2823);
 }
@@ -70,14 +71,17 @@ nav li > a {
 }
 
 .hero-section .par {
-  border-radius: 20rem;
-  text-align: center;
-  width: 14rem;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #C6C6C6;
+  font-size: 1rem;
+
 }
 
 .hero-section .head h1 {
-  font-size: 2.5rem;
+  font-size: 72px;
+  display: flex;
+  flex-direction: column;
   font-weight: 800;
 }
 
@@ -86,9 +90,7 @@ nav li > a {
 }
 
 .hero-section .head p {
-  font-size: 1.5rem;
-  word-spacing: 0.2rem;
-  margin-bottom: 1rem;
+  font-size: 30rem;
 }
 
 .hero-section .data p {
