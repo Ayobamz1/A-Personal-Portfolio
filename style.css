@@ -86,7 +86,7 @@ nav li > a {
 }
 
 .hero-section .head h1 span {
-  color: blueviolet;
+  color: #04ce9f;
 }
 
 .hero-section .head p {
@@ -95,22 +95,46 @@ nav li > a {
   font-family: "Poppins", sans-serif;
 }
 
-.hero-buttons .view {
-  padding: 20px 30px;
-  background: linear-gradient(90deg, #06a882, #04ce9f);
-  border: none;
-}
-.hero-buttons .view {
-  padding: 20px 30px;
-  background: linear-gradient(90deg, #06a882, #04ce9f);
-  border: none;
-}
-.hero-buttons .view {
-  padding: 20px 30px;
-  background: linear-gradient(90deg, #06a882, #04ce9f);
-  border: none;
+.btn {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
+.hero-buttons .view {
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #06a882, #04ce9f);
+  border: none;
+  transition: .4s;
+}
+
+.hero-buttons .view:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 20px #04ce9f;
+}
+
+.hero-buttons .contact {
+  padding: 15px 20px;
+  border: none;
+  color: #04ce9f;
+  border: 1px solid #04ce9f;
+}
+
+.hero-buttons .contact:hover {
+  background: #04ce9f;
+  color: #000;
+}
+.hero-buttons .download {
+  padding: 15px 20px;
+  color: #04ce9f;
+  border: 2px solid #04ce9f;
+  transition: .4s;
+}
+
+.hero-buttons .download:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #06a882, #04ce9f);
+  color: #fff;
+}
 .hero-section .data p {
   font-size: 1.2rem;
   font-weight: 500;
