@@ -15,10 +15,11 @@ body {
 }
 
 
-h1, h2, h3, .navbar-brand, .btn {
-}
 .navbar .nav-link:hover {
   color: rgb(90, 90, 216);
+}
+
+nav {
 }
 
 .btn-hire {
@@ -37,12 +38,12 @@ h1, h2, h3, .navbar-brand, .btn {
 
 
 header#home {
-  background-image:
-    linear-gradient(rgba(15, 15, 20, 0.65), rgba(15, 15, 20, 0.65)),
-    url("images/Background.jpg");
+  background: #1E1E1E;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ---------- HERO ---------- */
@@ -52,6 +53,10 @@ header#home {
   overflow-x: clip;
 }
 
+nav span {
+  font-size: 40px;
+  font-weight: 700;
+}
 
 
 .hero-section .par {
