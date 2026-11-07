@@ -45,7 +45,7 @@ header#home {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 40px;
+  min-height: 80px;
   font-family: "Poppins", sans-serif;
   border: 1px solid #292929;
 }
@@ -176,6 +176,10 @@ nav li > a {
   pointer-events: none;
 }
 
+.hero-section .github {
+  margin-top: 1.5rem;
+}
+
 .hero-section .github a {
   text-decoration: none;
   color: #fff;
@@ -183,6 +187,7 @@ nav li > a {
   font-weight: 600;
   padding-bottom: 4px;
 }
+
 
 .hero-section .github a:hover {
   color: #04ce9f;
@@ -204,12 +209,22 @@ nav li > a {
   .hero-section {
     padding: 100px 0;
   }
-  .hero-section .head h1 {
-    font-size: 3.5rem;
-  }
   .hero-section .head p {
     font-size: 2rem;
   }
+.hero-section .head h1 {
+  font-size: 2.5rem;   /* was 72px */
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+}
+.navbar-brand span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.hero-section .github a {
+  margin-top: rem;
+}
 }
 
 /* Laptop and up */
@@ -222,5 +237,18 @@ nav li > a {
   }
   .hero-section .head p {
     font-size: 3rem;
+  }
+}
+
+/* Below 992px (phones and tablets): center everything */
+@media (max-width: 991.98px) {
+  .hero-section .text {
+    text-align: center;        /* centers the text AND the github link */
+  }
+  .hero-section .head h1 {
+    align-items: center;       /* h1 is a flex column, so this centers its lines */
+  }
+  .hero-buttons {
+    justify-content: center;   /* buttons are flex items, so text-align doesn't affect them */
   }
 }
