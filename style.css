@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Space Grotesk", Arial, sans-serif;
+  /* font-family: "Space Grotesk", Arial, sans-serif; */
   min-height: 100vh;
   color: #fff;
 }
@@ -258,9 +258,6 @@ nav li > a {
   }
 }
 
-:root {
-  --accent: #04ce9f;   /* change to #ff7a18 for the orange in your screenshot */
-}
 
 .about-section {
   background: #1a1a1a;
@@ -296,6 +293,11 @@ nav li > a {
   background: rgba(4, 206, 159, 0.1);
   color: #04ce9f;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   padding: 0.6rem 1rem;
+}
+
+.skills-section {
+  font-family: "Poppins", sans-serif;
+
 }
